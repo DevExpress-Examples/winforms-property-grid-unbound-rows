@@ -1,3 +1,11 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [UnboundRow.cs](./CS/DXApplication3/CustomDescriptor/UnboundRow.cs)
+* [UnboundRowHelper.cs](./CS/DXApplication3/CustomDescriptor/UnboundRowHelper.cs)
+* [Form1.cs](./CS/DXApplication3/Form1.cs)
+* [Program.cs](./CS/DXApplication3/Program.cs)
+<!-- default file list end -->
 # How to implement unbound rows in PropertyGridControl
 
 
