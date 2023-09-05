@@ -1,5 +1,7 @@
-﻿Namespace DXApplication3
-    Partial Public Class Form1
+Namespace DXApplication3
+
+    Partial Class Form1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -10,14 +12,14 @@
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Windows Form Designer generated code"
-
+'#Region "Windows Form Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
@@ -28,11 +30,11 @@
             Me.propertyDescriptionControl1 = New DevExpress.XtraVerticalGrid.PropertyDescriptionControl()
             Me.propertyGridControl1 = New DevExpress.XtraVerticalGrid.PropertyGridControl()
             Me.sourceObject1 = New DXApplication3.SourceObject()
-            DirectCast(Me.panelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.panelControl1), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.panelControl1.SuspendLayout()
-            DirectCast(Me.splitContainerControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.splitContainerControl1), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.splitContainerControl1.SuspendLayout()
-            DirectCast(Me.propertyGridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.propertyGridControl1), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             ' 
             ' panelControl1
@@ -90,22 +92,23 @@
             Me.Controls.Add(Me.panelControl1)
             Me.Name = "Form1"
             Me.Text = "Form1"
-            DirectCast(Me.panelControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.panelControl1), System.ComponentModel.ISupportInitialize).EndInit()
             Me.panelControl1.ResumeLayout(False)
-            DirectCast(Me.splitContainerControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.splitContainerControl1), System.ComponentModel.ISupportInitialize).EndInit()
             Me.splitContainerControl1.ResumeLayout(False)
-            DirectCast(Me.propertyGridControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.propertyGridControl1), System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
-
         End Sub
 
-        #End Region
-
+'#End Region
         Private panelControl1 As DevExpress.XtraEditors.PanelControl
+
         Private splitContainerControl1 As DevExpress.XtraEditors.SplitContainerControl
+
         Private propertyGridControl1 As DevExpress.XtraVerticalGrid.PropertyGridControl
+
         Private propertyDescriptionControl1 As DevExpress.XtraVerticalGrid.PropertyDescriptionControl
-        Private sourceObject1 As SourceObject
+
+        Private sourceObject1 As DXApplication3.SourceObject
     End Class
 End Namespace
-

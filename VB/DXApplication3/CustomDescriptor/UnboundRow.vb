@@ -1,19 +1,20 @@
-﻿Imports System
-Imports System.Collections.Generic
-Imports System.Linq
-Imports System.Text
+Imports System
 Imports System.ComponentModel
 
 Namespace DXApplication3
+
     Public Class UnboundRow
         Inherits PropertyDescriptor
 
         Private _MyValue As Object
+
         Private ReadOnly _ValueType As Type
-        Public Property MyValue() As Object
+
+        Public Property MyValue As Object
             Get
                 Return _MyValue
             End Get
+
             Set(ByVal value As Object)
                 _MyValue = value
             End Set
@@ -24,32 +25,29 @@ Namespace DXApplication3
             _ValueType = valueType
         End Sub
 
-
-        Protected Sub New(ByVal name As String, ByVal attrs() As Attribute)
+        Protected Sub New(ByVal name As String, ByVal attrs As Attribute())
             MyBase.New(name, attrs)
-
         End Sub
+
         Protected Sub New(ByVal descr As MemberDescriptor)
             MyBase.New(descr)
-
         End Sub
-        Protected Sub New(ByVal descr As MemberDescriptor, ByVal attrs() As Attribute)
+
+        Protected Sub New(ByVal descr As MemberDescriptor, ByVal attrs As Attribute())
             MyBase.New(descr, attrs)
-
         End Sub
 
-        Public Overrides ReadOnly Property Category() As String
+        Public Overrides ReadOnly Property Category As String
             Get
                 Return "!Unbound rows"
             End Get
         End Property
 
-
         Public Overrides Function CanResetValue(ByVal component As Object) As Boolean
             Return False
         End Function
 
-        Public Overrides ReadOnly Property ComponentType() As Type
+        Public Overrides ReadOnly Property ComponentType As Type
             Get
                 Return _ValueType
             End Get
@@ -59,20 +57,19 @@ Namespace DXApplication3
             Return MyValue
         End Function
 
-        Public Overrides ReadOnly Property IsReadOnly() As Boolean
+        Public Overrides ReadOnly Property IsReadOnly As Boolean
             Get
                 Return False
             End Get
         End Property
 
-        Public Overrides ReadOnly Property PropertyType() As Type
+        Public Overrides ReadOnly Property PropertyType As Type
             Get
                 Return _ValueType
             End Get
         End Property
 
         Public Overrides Sub ResetValue(ByVal component As Object)
-
         End Sub
 
         Public Overrides Sub SetValue(ByVal component As Object, ByVal value As Object)
