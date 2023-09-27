@@ -6,10 +6,10 @@
 
 # WinForms Property Grid - How to implement unbound rows
 
-The WinForms Property Grid Control dos not support unbound rows out of the box. This example demonstrates how to implement this functionality using custom property descriptors. See the implementation of the [CustomPropertyDescriptors](https://docs.devexpress.com/WindowsForms/DevExpress.XtraVerticalGrid.PropertyGridControl.CustomPropertyDescriptors) event handler:
+The WinForms Property Grid Control does not support unbound rows out of the box. This example demonstrates how to implement this functionality using custom property descriptors. See the implementation of the [CustomPropertyDescriptors](https://docs.devexpress.com/WindowsForms/DevExpress.XtraVerticalGrid.PropertyGridControl.CustomPropertyDescriptors) event handler:
 
 ```csharp
-// Stores property values that do not present in the selected object.
+// Stores property values that are not present in the selected object.
 void _PropertyGrid_CustomPropertyDescriptors(object sender, CustomPropertyDescriptorsEventArgs e) {
     if ((sender as PropertyGridControl).SelectedObject == e.Source) {
         PropertyDescriptorCollection properties = e.Properties;
