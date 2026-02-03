@@ -1,9 +1,12 @@
 Imports System
 Imports System.Collections.Generic
+Imports System.Linq
+Imports System.Text
 Imports DevExpress.XtraVerticalGrid
 Imports DevExpress.XtraVerticalGrid.Events
 Imports System.ComponentModel
 Imports System.Collections
+Imports DevExpress.XtraVerticalGrid.Rows
 
 Namespace DXApplication3
 
@@ -15,7 +18,7 @@ Namespace DXApplication3
 
         Public Sub New(ByVal pg As PropertyGridControl)
             _PropertyGrid = pg
-            AddHandler _PropertyGrid.CustomPropertyDescriptors, AddressOf _PropertyGrid_CustomPropertyDescriptors
+            Me._PropertyGrid.CustomPropertyDescriptors += AddressOf _PropertyGrid_CustomPropertyDescriptors
         End Sub
 
         Private Sub _PropertyGrid_CustomPropertyDescriptors(ByVal sender As Object, ByVal e As CustomPropertyDescriptorsEventArgs)

@@ -1,5 +1,10 @@
+Imports System
+Imports System.Collections.Generic
 Imports System.ComponentModel
+Imports System.Data
 Imports System.Drawing
+Imports System.Linq
+Imports System.Text
 Imports System.Windows.Forms
 
 Namespace DXApplication3
@@ -12,7 +17,7 @@ Namespace DXApplication3
             Dim helper As UnboundRowsHelper = New UnboundRowsHelper(propertyGridControl1)
             helper.AddUnboundRow("UnboundInt", GetType(Integer))
             helper.AddUnboundRow("UnboundString", GetType(String))
-            helper.AddUnboundRow("UnboundDateTime", GetType(Date))
+            helper.AddUnboundRow("UnboundDateTime", GetType(DateTime))
             propertyGridControl1.RetrieveFields()
         End Sub
     End Class
